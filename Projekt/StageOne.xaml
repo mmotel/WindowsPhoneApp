@@ -24,7 +24,7 @@
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot">
         <Grid.Background>
-            <ImageBrush ImageSource="/Projekt;component/bg14.jpg" />
+            <ImageBrush ImageSource="/Projekt;component/bg.jpg" />
         </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="95*"/>

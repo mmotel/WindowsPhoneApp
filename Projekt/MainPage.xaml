@@ -23,17 +23,19 @@
 
         <!--TitlePanel contains the name of the application and page title-->
         <Grid x:Name="TitlePanel"  Grid.Row="0">
-            <!---<TextBlock x:Name="ApplicationTitle" Text="WIN A MILION!" FontFamily="Calibri" FontStyle="Italic" FontSize="32"  Margin="0,32,0,0" HorizontalAlignment="Center" VerticalAlignment="Top"/>-->
+            <TextBlock x:Name="ApplicationTitle" Text="WIN A MILLION!" Foreground="Black" FontWeight="Bold" FontFamily="Calibri" FontStyle="Italic" FontSize="71"  Margin="0,-15,0,0" HorizontalAlignment="Center" VerticalAlignment="Top"/>
             <TextBlock x:Name="PageTitle" Text="MAIN MENU" FontFamily="Calibri" FontStyle="Italic" FontSize="48" Margin="0,40,0,0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
         </Grid>
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0" Grid.ColumnSpan="2">
             <StackPanel>
-                <Button Name="Stage1" Background="#07719B" BorderThickness="0" Content="START GAME" Click="Stage1_Click" Width="370" Height="120"/>
+                <Button Name="Stage1" Background="#07719B" BorderThickness="0" Content="START GAME" Click="Stage1_Click"  Height="120"/>
 
-                <Button Name="Settings" Background="#07719B" BorderThickness="0" Content="SETTINGS" Click="Settings_Click" Width="370" Height="120"/>
- 
+                <Button Name="Settings" Background="#07719B" BorderThickness="0" Content="SETTINGS" Click="Settings_Click" Height="120"/>
+
+                <Button Name="Instruction" Background="#07719B" BorderThickness="0" Content="INSTRUCTION" Click="Instruction_Click" Height="120"/>
+
                 <!--
                 <Button Name="Stage2" Background="#07719B" BorderThickness="0" Content="STAGE TWO" Click="Stage2_Click" Width="370" Height="120"/>
 
@@ -50,7 +52,7 @@
             </StackPanel>
         </Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/Projekt;component/bg14.jpg" />
+            <ImageBrush ImageSource="/Projekt;component/bg.jpg" />
         </Grid.Background>
     </Grid>
  

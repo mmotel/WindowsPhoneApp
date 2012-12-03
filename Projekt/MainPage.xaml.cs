@@ -72,5 +72,10 @@ namespace Projekt
             test.Text = "";
             thisApp.setData.loadSettings();
         }
+
+        private void Instruction_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Instruction.xaml", UriKind.RelativeOrAbsolute));
+        }
     }
 }
