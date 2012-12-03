@@ -1,0 +1,99 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="Projekt.Settings"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    
+    xmlns:local="clr-namespace:Projekt"
+    
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="800"
+    FontFamily="Calibri"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="False"
+    BackKeyPress="PhoneApplicationPage_BackKeyPress">
+
+    <phone:PhoneApplicationPage.Resources>
+        <local:Game x:Key="GameClass" />
+    </phone:PhoneApplicationPage.Resources>
+
+    <!--LayoutRoot contains the root grid where all other page content is placed-->
+    <Grid x:Name="LayoutRoot">
+        <Grid.Background>
+            <ImageBrush ImageSource="/Projekt;component/bg11.jpg" />
+        </Grid.Background>
+        <controls:Panorama Title="Settings">
+
+            <!--Panorama item one-->
+            <controls:PanoramaItem Header="Personal">
+                <Grid x:Name="PersonalSettings">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="200*"/>
+                        <RowDefinition Height="400*"/>
+
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0" Margin="0,5,0,5" Background="#07719B">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="100*"/>
+                            <RowDefinition Height="100*"/>
+                        </Grid.RowDefinitions>
+                    
+                        <TextBlock FontFamily="Calibri" FontSize="38" FontStyle="Italic" Margin="10" Grid.Row="0" VerticalAlignment="Center">Your nick:</TextBlock>
+
+                        <TextBox x:Name="nick" Grid.Row="1" Text="{Binding Path=Nick, Mode=TwoWay}"></TextBox>
+                        
+                    </Grid>
+
+                    <Grid Grid.Row="1" Margin="0,5,0,5" Background="#07719B">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="100*"/>
+                            <RowDefinition Height="100*"/>
+                            <RowDefinition Height="100*"/>
+                            <RowDefinition Height="100*"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock FontFamily="Calibri" FontSize="38" FontStyle="Italic" Margin="10" Grid.Row="0" VerticalAlignment="Center">Choose level:</TextBlock>
+
+                        <RadioButton x:Name="level60" Content="Begginer (60 secounds for ansver)" Grid.Row="1" IsChecked="{Binding Path=Level60, Mode=TwoWay}"/>
+
+                        <RadioButton x:Name="level30" Content="Smart (30 secounds for ansver)" Grid.Row="2" IsChecked="{Binding Path=Level30, Mode=TwoWay}"/>
+
+                        <RadioButton x:Name="level15" Content="Genius (15 secounds for ansver)" Grid.Row="3" IsChecked="{Binding Path=Level15, Mode=TwoWay}"/>
+                    </Grid>
+                </Grid>
+            </controls:PanoramaItem>
+
+            <!--Panorama item two-->
+            <controls:PanoramaItem Header="Categories">
+                <Grid x:Name="CategoriesSettings" Margin="0,5,0,5" Background="#07719B">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100*"/>
+                        <RowDefinition Height="100*"/>
+                        <RowDefinition Height="100*"/>
+                        <RowDefinition Height="100*"/>
+                        <RowDefinition Height="100*"/>
+                        <RowDefinition Height="100*"/>
+                        <RowDefinition Height="100*"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock FontFamily="Calibri" TextWrapping="Wrap" FontSize="24" FontStyle="Italic" Margin="10" Grid.Row="0" VerticalAlignment="Center">Choose TWO categories you don't want to answer:</TextBlock>
+
+                    <CheckBox x:Name="cat1" Grid.Row="1" Content="Geography" Click="Categories_Click" IsChecked="{Binding Path=Cat1, Mode=TwoWay}"/>
+                    <CheckBox x:Name="cat2" Grid.Row="2" Content="Exact sciences" Click="Categories_Click" IsChecked="{Binding Path=Cat2, Mode=TwoWay}"/>
+                    <CheckBox x:Name="cat3" Grid.Row="3" Content="Music and art" Click="Categories_Click" IsChecked="{Binding Path=Cat3, Mode=TwoWay}"/>
+                    <CheckBox x:Name="cat4" Grid.Row="4" Content="Sport" Click="Categories_Click" IsChecked="{Binding Path=Cat4, Mode=TwoWay}"/>
+                    <CheckBox x:Name="cat5" Grid.Row="5" Content="History" Click="Categories_Click" IsChecked="{Binding Path=Cat5, Mode=TwoWay}"/>
+                    <CheckBox x:Name="cat6" Grid.Row="6" Content="Biology" Click="Categories_Click" IsChecked="{Binding Path=Cat6, Mode=TwoWay}"/>
+                </Grid>
+            </controls:PanoramaItem>
+        </controls:Panorama>
+    </Grid>
+
+    <!--Panorama-based applications should not show an ApplicationBar-->
+
+</phone:PhoneApplicationPage>
