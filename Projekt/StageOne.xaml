@@ -43,16 +43,16 @@
         </Grid>
 
         <!--TitlePanel contains the name of the application and page title-->
-        <Grid x:Name="infoPanel" Grid.Row="2" Margin="20,0,20,5">
+        <Grid x:Name="infoPanel" Grid.Row="2" Margin="12,0,12,5">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="230"/>
                 <ColumnDefinition Width="230"/>
             </Grid.ColumnDefinitions>
 
             <TextBlock x:Name="Cash" FontFamily="Verdana" FontSize="22" Text="{Binding Path=Rem_cash}" Grid.Column="0" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center"  Width="200" Height="Auto" />
-            <StackPanel x:Name="passingTime" Grid.Column="1" Background="Black" Width="200" HorizontalAlignment="Left"></StackPanel>
+            <StackPanel x:Name="passingTime" Grid.Column="1" Background="Black" Width="230" HorizontalAlignment="Left"></StackPanel>
             <TextBlock Loaded="StartTimer" FontFamily="Verdana" FontSize="22"  Grid.Column="1" x:Name="txtblock" TextAlignment="Left" VerticalAlignment="Center" HorizontalAlignment="Center" Width="200" Height="auto"/>
-            <Button BorderThickness="0" Height="50" Width="200" Click="Button_Click" Margin="1,-4,29,-3" Grid.Column="1"></Button>
+            <Button BorderThickness="0" Height="50" Width="auto" Click="Button_Click" Grid.Column="1"></Button>
         
         </Grid>
 
@@ -64,7 +64,7 @@
                 <RowDefinition Height="125"/>
             </Grid.RowDefinitions>
 
-            <Grid x:Name="answer1" Grid.Row="0" Margin="30,5,30,5" Background="#07719B">
+            <Grid x:Name="answer1" Grid.Row="0" Margin="12,5,12,5" Background="#07719B">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="70"/>
                     <RowDefinition Height="55"/>
@@ -72,11 +72,11 @@
                 <TextBlock x:Name="Answer1_text" FontFamily="Calibri" FontStyle="Italic" FontSize="32" Text="ANSWER 1" TextWrapping="Wrap" Grid.Row="0" Grid.Column="0" Width="270" Height="auto" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="15,5,0,0"/>
                 <TextBlock x:Name="bet1" FontFamily="Verdana" Text="{Binding Path=Bet1}" Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Center" Width="auto" Height="40" Margin="0,10,10,0"/>
 
-                <Slider Value="{Binding Path=Bet1, Mode=TwoWay}" Height="84" Grid.Row="1" HorizontalAlignment="Center" x:Name="slider1" VerticalAlignment="Top" Width="430" 
+                <Slider Value="{Binding Path=Bet1, Mode=TwoWay}" Height="84" Grid.Row="1" HorizontalAlignment="Center" x:Name="slider1" VerticalAlignment="Top" Width="450" 
                     Minimum="0" Maximum="1000000"/>
             </Grid>
 
-            <Grid x:Name="answer2" Grid.Row="1" Margin="30,5,30,5" Background="#07719B">
+            <Grid x:Name="answer2" Grid.Row="1" Margin="12,5,12,5" Background="#07719B">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="70"/>
                     <RowDefinition Height="55"/>
@@ -84,11 +84,11 @@
                 <TextBlock x:Name="Answer2_text" FontFamily="Calibri" FontStyle="Italic" FontSize="32" Text="ANSWER 2" TextWrapping="Wrap" Grid.Row="0" Grid.Column="0" Width="270" Height="auto" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="15,5,0,0"/>
                 <TextBlock x:Name="bet2" FontFamily="Verdana" Text="{Binding Path=Bet2}" Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Center" Width="auto" Height="40" Margin="0,10,10,0"/>
 
-                <Slider  Value="{Binding Path=Bet2, Mode=TwoWay}" Height="84" Grid.Row="1" HorizontalAlignment="Center" x:Name="slider2" VerticalAlignment="Top" Width="430" 
+                <Slider  Value="{Binding Path=Bet2, Mode=TwoWay}" Height="84" Grid.Row="1" HorizontalAlignment="Center" x:Name="slider2" VerticalAlignment="Top" Width="450" 
                     Minimum="0" Maximum="1000000"/>
             </Grid>
 
-            <Grid  x:Name="answer3" Grid.Row="2"  Margin="30,5,30,5" Background="#07719B">
+            <Grid  x:Name="answer3" Grid.Row="2"  Margin="12,5,12,5" Background="#07719B">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="70"/>
                     <RowDefinition Height="55"/>
@@ -96,11 +96,11 @@
                 <TextBlock x:Name="Answer3_text" FontFamily="Calibri" FontStyle="Italic" FontSize="32" Text="ANSWER 3" TextWrapping="Wrap" Grid.Row="0" Grid.Column="0" Width="270" Height="auto" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="15,5,0,0"/>
                 <TextBlock x:Name="bet3" FontFamily="Verdana" Text="{Binding Path=Bet3}" Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Center" Width="auto" Height="40" Margin="0,10,10,0"/>
 
-                <Slider Value="{Binding Path=Bet3, Mode=TwoWay}" Height="84" Grid.Row="1" HorizontalAlignment="Center" x:Name="slider3" VerticalAlignment="Top" Width="430" 
+                <Slider Value="{Binding Path=Bet3, Mode=TwoWay}" Height="84" Grid.Row="1" HorizontalAlignment="Center" x:Name="slider3" VerticalAlignment="Top" Width="450" 
                     Minimum="0" Maximum="1000000"/>
             </Grid>
 
-            <Grid  x:Name="answer4" Grid.Row="3" Margin="30,5,30,5" Background="#07719B">
+            <Grid  x:Name="answer4" Grid.Row="3" Margin="12,5,12,5" Background="#07719B">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="70"/>
                     <RowDefinition Height="55"/>
@@ -108,7 +108,7 @@
                 <TextBlock x:Name="Answer4_text" FontFamily="Calibri" FontStyle="Italic" FontSize="32" Text="ANSWER 4" TextWrapping="Wrap" Grid.Row="0" Grid.Column="0" Width="270" Height="auto" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="15,5,0,0"/>
                 <TextBlock x:Name="bet4" FontFamily="Verdana" Text="{Binding Path=Bet4}" Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Center" Width="auto" Height="40" Margin="0,10,10,0"/>
 
-                <Slider Value="{Binding Path=Bet4, Mode=TwoWay}" Height="84" Grid.Row="1" HorizontalAlignment="Center" x:Name="slider4" VerticalAlignment="Top" Width="430" 
+                <Slider Value="{Binding Path=Bet4, Mode=TwoWay}" Height="84" Grid.Row="1" HorizontalAlignment="Center" x:Name="slider4" VerticalAlignment="Top" Width="450" 
                     Minimum="0" Maximum="1000000"/>
             </Grid>
         </Grid>
