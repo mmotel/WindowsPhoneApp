@@ -43,7 +43,7 @@
         </Grid>
 
         <!--TitlePanel contains the name of the application and page title-->
-        <Grid Name="infoPanel" Grid.Row="2"  Margin="20,0,20,5">
+        <Grid x:Name="infoPanel" Grid.Row="2"  Margin="20,0,20,5">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="230"/>
                 <ColumnDefinition Width="230"/>
@@ -51,7 +51,7 @@
 
             <TextBlock x:Name="Cash" FontFamily="Verdana" FontSize="22" Text="{Binding Path=Rem_cash}" Grid.Column="0" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center"  Width="200" Height="Auto" />
             <StackPanel x:Name="passingTime" Grid.Column="1" Background="Black" Width="200" HorizontalAlignment="Left"></StackPanel>
-            <TextBlock Loaded="StartTimer" FontFamily="Verdana" FontSize="22" TextAlignment="Left" Grid.Column="1" Name="txtblock" VerticalAlignment="Center" HorizontalAlignment="Center" Width="200" Height="Auto"></TextBlock>
+            <TextBlock Loaded="StartTimer" FontFamily="Verdana" FontSize="22" TextAlignment="Left" Grid.Column="1" x:Name="txtblock" VerticalAlignment="Center" HorizontalAlignment="Center" Width="200" Height="Auto"></TextBlock>
             <Button Grid.Column="1" BorderThickness="0" Height="50" Width="200" Click="Button_Click"></Button>
         
         </Grid>
@@ -71,7 +71,7 @@
                 <TextBlock x:Name="Answer1_text" FontFamily="Calibri" FontStyle="Italic" FontSize="32" Text="ANSWER 1" TextWrapping="Wrap" Grid.Row="0" Grid.Column="0" Width="270" Height="auto" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="15,5,0,0"/>
                 <TextBlock x:Name="bet1" FontFamily="Verdana" Text="{Binding Path=Bet1}" Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Center" Width="auto" Height="40" Margin="0,10,10,0"/>
 
-                <Slider Value="{Binding Path=Bet1, Mode=TwoWay}" Height="84" Grid.Row="1" HorizontalAlignment="Center" Name="slider1" VerticalAlignment="Top" Width="430" 
+                <Slider Value="{Binding Path=Bet1, Mode=TwoWay}" Height="84" Grid.Row="1" HorizontalAlignment="Center" x:Name="slider1" VerticalAlignment="Top" Width="430" 
                     Minimum="0" Maximum="1000000"/>
             </Grid>
 
@@ -83,7 +83,7 @@
                 <TextBlock x:Name="Answer2_text" FontFamily="Calibri" FontStyle="Italic" FontSize="32" Text="ANSWER 2" TextWrapping="Wrap" Grid.Row="0" Grid.Column="0" Width="270" Height="auto" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="15,5,0,0"/>
                 <TextBlock x:Name="bet2" FontFamily="Verdana" Text="{Binding Path=Bet2}" Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Center" Width="auto" Height="40" Margin="0,10,10,0"/>
 
-                <Slider  Value="{Binding Path=Bet2, Mode=TwoWay}" Height="84" Grid.Row="1" HorizontalAlignment="Center" Name="slider2" VerticalAlignment="Top" Width="430" 
+                <Slider  Value="{Binding Path=Bet2, Mode=TwoWay}" Height="84" Grid.Row="1" HorizontalAlignment="Center" x:Name="slider2" VerticalAlignment="Top" Width="430" 
                     Minimum="0" Maximum="1000000"/>
             </Grid>
 
@@ -95,7 +95,7 @@
                 <TextBlock x:Name="Answer3_text" FontFamily="Calibri" FontStyle="Italic" FontSize="32" Text="ANSWER 3" TextWrapping="Wrap" Grid.Row="0" Grid.Column="0" Width="270" Height="auto" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="15,5,0,0"/>
                 <TextBlock x:Name="bet3" FontFamily="Verdana" Text="{Binding Path=Bet3}" Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Center" Width="auto" Height="40" Margin="0,10,10,0"/>
 
-                <Slider Value="{Binding Path=Bet3, Mode=TwoWay}" Height="84" Grid.Row="1" HorizontalAlignment="Center" Name="slider3" VerticalAlignment="Top" Width="430" 
+                <Slider Value="{Binding Path=Bet3, Mode=TwoWay}" Height="84" Grid.Row="1" HorizontalAlignment="Center" x:Name="slider3" VerticalAlignment="Top" Width="430" 
                     Minimum="0" Maximum="1000000"/>
             </Grid>
         </Grid>

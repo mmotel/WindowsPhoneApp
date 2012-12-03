@@ -19,6 +19,7 @@ namespace Projekt
     {
         public Game game;
         public SettingsData setData;
+        public ScoreDB ActiveDB;
 
         /// <summary>
         /// Provides easy access to the root frame of the Phone Application.
@@ -61,6 +62,10 @@ namespace Projekt
                 // and consume battery power when the user is not using the phone.
                 PhoneApplicationService.Current.UserIdleDetectionMode = IdleDetectionMode.Disabled;
             }
+
+            ScoreDB.MakeDB();
+
+            ActiveDB = new ScoreDB("Data Source=isostore:/Sample.sdf");
 
         }
 

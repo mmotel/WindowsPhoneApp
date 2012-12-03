@@ -35,6 +35,8 @@ namespace Projekt
                 {
                     info.Text = "Congratulations, " + thisApp.setData.Nick + "! You survive eight questions and win your cash!";
                     Next_Q.Visibility = Visibility.Collapsed;
+
+                    thisApp.ActiveDB.addScore(thisApp.setData.Nick, thisApp.game.Cash); 
                 }
                 else
                 {

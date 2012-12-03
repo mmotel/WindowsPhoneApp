@@ -68,14 +68,25 @@ namespace Projekt
 
         private void testuj_Click(object sender, RoutedEventArgs e)
         {
-            thisApp.setData.clearIS("settings.txt");
+            //thisApp.setData.clearIS("settings.txt");
             test.Text = "";
-            thisApp.setData.loadSettings();
+            //thisApp.setData.loadSettings();
+            
+
+            foreach (Storage s in thisApp.ActiveDB.getScores())
+            {
+                test.Text += "ID: " + s.ScoreID.ToString() + " Nick: " + s.Nick + " Score: " + s.Score.ToString() + " Date: " + s.Date.ToString();
+            }
         }
 
         private void Instruction_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Uri("/Instruction.xaml", UriKind.RelativeOrAbsolute));
+        }
+
+        private void Ranking_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Ranking.xaml", UriKind.RelativeOrAbsolute));
         }
     }
 }

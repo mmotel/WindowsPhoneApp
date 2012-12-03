@@ -1,0 +1,132 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="Projekt.Ranking"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot">
+        <Grid.Background>
+            <ImageBrush ImageSource="/Projekt;component/bg.jpg" />
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="600*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <Grid x:Name="TitlePanel"  Grid.Row="0">
+            <TextBlock x:Name="PageTitle" Text="RANKING" FontFamily="Calibri" FontStyle="Italic" FontSize="48" Margin="0,40,0,0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </Grid>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100*"></RowDefinition>
+                <RowDefinition Height="100*"></RowDefinition>
+                <RowDefinition Height="100*"></RowDefinition>
+                <RowDefinition Height="100*"></RowDefinition>
+                <RowDefinition Height="100*"></RowDefinition>
+            </Grid.RowDefinitions>
+            
+            
+            <Grid Grid.Row="0" Margin="0,5,0,5" Background="#07719B">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100*"></RowDefinition>
+                    <RowDefinition Height="70*"></RowDefinition>
+                    <RowDefinition Height="70*"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <TextBlock x:Name="one_nick" Text="1. " Grid.Row="0" Margin="5, 0, 0, 0" FontFamily="Calibri" FontStyle="Normal" FontSize="44" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+
+                <TextBlock x:Name="one_score" Text="Result: " Grid.Row="1" Margin="5, 0, 0, 0" FontFamily="Calibri" FontStyle="Normal" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+
+                <TextBlock x:Name="one_date" Text="Date: " Grid.Row="2" Margin="5, 0, 0, 0" FontFamily="Calibri" FontStyle="Normal" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+
+            </Grid>
+
+            <Grid Grid.Row="1" Margin="0,5,0,5" Background="#07719B">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100*"></RowDefinition>
+                    <RowDefinition Height="70*"></RowDefinition>
+                    <RowDefinition Height="70*"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <TextBlock x:Name="two_nick" Text="2. " Grid.Row="0" Margin="5, 0, 0, 0" FontFamily="Calibri" FontStyle="Normal" FontSize="44" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+
+                <TextBlock x:Name="two_score" Text="Result: " Grid.Row="1" Margin="5, 0, 0, 0" FontFamily="Calibri" FontStyle="Normal" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+
+                <TextBlock x:Name="two_date" Text="Date: " Grid.Row="2" Margin="5, 0, 0, 0" FontFamily="Calibri" FontStyle="Normal" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+
+            </Grid>
+
+            <Grid Grid.Row="2" Margin="0,5,0,5" Background="#07719B">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100*"></RowDefinition>
+                    <RowDefinition Height="70*"></RowDefinition>
+                    <RowDefinition Height="70*"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <TextBlock x:Name="three_nick" Text="3. " Grid.Row="0" Margin="5, 0, 0, 0" FontFamily="Calibri" FontStyle="Normal" FontSize="44" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+
+                <TextBlock x:Name="three_score" Text="Result: " Grid.Row="1" Margin="5, 0, 0, 0" FontFamily="Calibri" FontStyle="Normal" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+
+                <TextBlock x:Name="three_date" Text="Date: " Grid.Row="2" Margin="5, 0, 0, 0" FontFamily="Calibri" FontStyle="Normal" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+
+            </Grid>
+
+            <Grid Grid.Row="3" Margin="0,5,0,5" Background="#07719B">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100*"></RowDefinition>
+                    <RowDefinition Height="70*"></RowDefinition>
+                    <RowDefinition Height="70*"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <TextBlock x:Name="four_nick" Text="4. " Grid.Row="0" Margin="5, 0, 0, 0" FontFamily="Calibri" FontStyle="Normal" FontSize="44" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+
+                <TextBlock x:Name="four_score" Text="Result: " Grid.Row="1" Margin="5, 0, 0, 0" FontFamily="Calibri" FontStyle="Normal" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+
+                <TextBlock x:Name="four_date" Text="Date: " Grid.Row="2" Margin="5, 0, 0, 0" FontFamily="Calibri" FontStyle="Normal" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+
+            </Grid>
+
+            <Grid Grid.Row="4" Margin="0,5,0,5" Background="#07719B">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100*"></RowDefinition>
+                    <RowDefinition Height="70*"></RowDefinition>
+                    <RowDefinition Height="70*"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <TextBlock x:Name="five_nick" Text="5. " Grid.Row="0" Margin="5, 0, 0, 0" FontFamily="Calibri" FontStyle="Normal" FontSize="44" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+
+                <TextBlock x:Name="five_score" Text="Result: " Grid.Row="1" Margin="5, 0, 0, 0" FontFamily="Calibri" FontStyle="Normal" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+
+                <TextBlock x:Name="five_date" Text="Date: " Grid.Row="2" Margin="5, 0, 0, 0" FontFamily="Calibri" FontStyle="Normal" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+
+            </Grid>
+
+        </Grid>
+    </Grid>
+ 
+    <!--Sample code showing usage of ApplicationBar-->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Button 1"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Button 2"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
+                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+
+</phone:PhoneApplicationPage>
