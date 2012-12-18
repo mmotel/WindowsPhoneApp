@@ -59,11 +59,11 @@
                         </Grid.RowDefinitions>
                         <TextBlock FontFamily="Calibri" FontSize="38" FontStyle="Italic" Margin="10" Grid.Row="0" VerticalAlignment="Center">Choose level:</TextBlock>
 
-                        <RadioButton x:Name="level60" Content="Begginer (60 secounds for ansver)" Grid.Row="1" IsChecked="{Binding Path=Level60, Mode=TwoWay}"/>
+                        <RadioButton x:Name="level60" Content="Begginer (60 secounds)" Grid.Row="1" IsChecked="{Binding Path=Level60, Mode=TwoWay}" FontSize="24"/>
 
-                        <RadioButton x:Name="level30" Content="Smart (30 secounds for ansver)" Grid.Row="2" IsChecked="{Binding Path=Level30, Mode=TwoWay}"/>
+                        <RadioButton x:Name="level30" Content="Smart (30 secounds)" Grid.Row="2" IsChecked="{Binding Path=Level30, Mode=TwoWay}" FontSize="24"/>
 
-                        <RadioButton x:Name="level15" Content="Genius (15 secounds for ansver)" Grid.Row="3" IsChecked="{Binding Path=Level15, Mode=TwoWay}"/>
+                        <RadioButton x:Name="level15" Content="Genius (15 secounds)" Grid.Row="3" IsChecked="{Binding Path=Level15, Mode=TwoWay}" FontSize="24"/>
                     </Grid>
                 </Grid>
             </controls:PanoramaItem>
@@ -81,14 +81,14 @@
                         <RowDefinition Height="100*"/>
                     </Grid.RowDefinitions>
 
-                    <TextBlock FontFamily="Calibri" TextWrapping="Wrap" FontSize="24" FontStyle="Italic" Margin="10" Grid.Row="0" VerticalAlignment="Center">Choose TWO categories you don't want to answer:</TextBlock>
+                    <TextBlock FontFamily="Calibri" TextWrapping="Wrap" FontSize="38" FontStyle="Italic" Margin="10" Grid.Row="0" VerticalAlignment="Center" Text="Choose TWO categories:"/>
 
-                    <CheckBox x:Name="cat1" Grid.Row="1" Content="Geography" Click="Categories_Click" IsChecked="{Binding Path=Cat1, Mode=TwoWay}"/>
-                    <CheckBox x:Name="cat2" Grid.Row="2" Content="Exact sciences" Click="Categories_Click" IsChecked="{Binding Path=Cat2, Mode=TwoWay}"/>
-                    <CheckBox x:Name="cat3" Grid.Row="3" Content="Music and art" Click="Categories_Click" IsChecked="{Binding Path=Cat3, Mode=TwoWay}"/>
-                    <CheckBox x:Name="cat4" Grid.Row="4" Content="Sport" Click="Categories_Click" IsChecked="{Binding Path=Cat4, Mode=TwoWay}"/>
-                    <CheckBox x:Name="cat5" Grid.Row="5" Content="History" Click="Categories_Click" IsChecked="{Binding Path=Cat5, Mode=TwoWay}"/>
-                    <CheckBox x:Name="cat6" Grid.Row="6" Content="Biology" Click="Categories_Click" IsChecked="{Binding Path=Cat6, Mode=TwoWay}"/>
+                    <CheckBox x:Name="cat1" Grid.Row="1" Content="Geography" Click="Categories_Click" IsChecked="{Binding Path=Cat1, Mode=TwoWay}" FontSize="22.667" VerticalAlignment="Center"/>
+                    <CheckBox x:Name="cat2" Grid.Row="2" Content="Exact sciences" Click="Categories_Click" IsChecked="{Binding Path=Cat2, Mode=TwoWay}" FontSize="22.667"/>
+                    <CheckBox x:Name="cat3" Grid.Row="3" Content="Music and art" Click="Categories_Click" IsChecked="{Binding Path=Cat3, Mode=TwoWay}" FontSize="22.667"/>
+                    <CheckBox x:Name="cat4" Grid.Row="4" Content="Sport" Click="Categories_Click" IsChecked="{Binding Path=Cat4, Mode=TwoWay}" FontSize="22.667"/>
+                    <CheckBox x:Name="cat5" Grid.Row="5" Content="History" Click="Categories_Click" IsChecked="{Binding Path=Cat5, Mode=TwoWay}" FontSize="22.667"/>
+                    <CheckBox x:Name="cat6" Grid.Row="6" Content="Biology" Click="Categories_Click" IsChecked="{Binding Path=Cat6, Mode=TwoWay}" FontSize="22.667"/>
                 </Grid>
             </controls:PanoramaItem>
         </controls:Panorama>

@@ -32,10 +32,9 @@ namespace Projekt
 
         public SettingsData()
         {
-            nick = "";
         }
 
-        public String saveSettings() //zmienić na void
+        public void saveSettings()
         {
             String settings = Level.ToString() + "\t";
 
@@ -49,7 +48,6 @@ namespace Projekt
 
             saveDataIS("settings.txt", settings);
             
-            return settings; //usunąć
         }
 
         public void loadSettings()
@@ -80,7 +78,7 @@ namespace Projekt
                 Level15 = false;
                 Level60 = false;
                 Level30 = true;
-                Nick = "";
+                Nick = "Player";
                 cat1 = false;
                 cat2 = false;
                 cat3 = false;

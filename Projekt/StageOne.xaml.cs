@@ -72,7 +72,7 @@ namespace Projekt
             else if(i > 0)
             {
                 i--;
-                passingTime.Width -= 200 / thisApp.setData.Level; 
+                passingTime.Width -= 230 / thisApp.setData.Level; 
                 txtblock.Text = "Time: " + i.ToString();
             }
         }

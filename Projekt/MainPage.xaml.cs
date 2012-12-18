@@ -18,8 +18,7 @@ namespace Projekt
         App thisApp = Application.Current as App;
         public MainPage()
         {
-            InitializeComponent();
-            //thisApp.setData.loadSettings();        
+            InitializeComponent();   
         }
 
         
@@ -45,38 +44,10 @@ namespace Projekt
             thisApp.game.resetGame();
             NavigationService.Navigate(new Uri("/StageOne.xaml", UriKind.RelativeOrAbsolute));
         }
-/*
-        private void Stage2_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new Uri("/StageTwo.xaml", UriKind.RelativeOrAbsolute));
-        }
 
-        private void Stage3_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new Uri("/FinalStage.xaml", UriKind.RelativeOrAbsolute));
-        }
-
-        private void Check_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new Uri("/Check.xaml", UriKind.RelativeOrAbsolute));
-        }
-        */
         private void Settings_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Uri("/Settings.xaml", UriKind.RelativeOrAbsolute));
-        }
-
-        private void testuj_Click(object sender, RoutedEventArgs e)
-        {
-            //thisApp.setData.clearIS("settings.txt");
-            test.Text = "";
-            //thisApp.setData.loadSettings();
-            
-
-            foreach (Storage s in thisApp.ActiveDB.getScores())
-            {
-                test.Text += "ID: " + s.ScoreID.ToString() + " Nick: " + s.Nick + " Score: " + s.Score.ToString() + " Date: " + s.Date.ToString();
-            }
         }
 
         private void Instruction_Click(object sender, RoutedEventArgs e)

@@ -10,6 +10,12 @@ using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using System.ComponentModel;
 
+using System.Collections.Generic;
+using System.Linq;
+using System.Data.Linq;
+using System.Data.Linq.Mapping;
+using System.Collections.ObjectModel;
+
 namespace Projekt
 {
     public class Game : INotifyPropertyChanged
@@ -55,103 +61,6 @@ namespace Projekt
                 cash = value;
             }
         }
-        /*
-        public double Rem_cash
-        {
-            get
-            {
-                rem_cash = cash - Bet1 - Bet2 - Bet3 - Bet4; 
-                return rem_cash;
-            }
-            set
-            {
-                rem_cash = value;
-            }
-        }
-        
-        public double Bet1
-        {
-            get
-            {
-                return bets[1];
-            }
-            set
-            {
-                if (value - bets[1] < rem_cash)
-                {
-                    bets[1] = value - value % 50000;
-                }
-                else
-                {
-                    bets[1] = bets[1] + rem_cash;
-                }
-                PropertyChanged(this, new PropertyChangedEventArgs("Rem_cash"));
-                PropertyChanged(this, new PropertyChangedEventArgs("Bet1"));
-            }
-        }
-        
-        public double Bet2
-        {
-            get
-            {
-                return bets[2];
-            }
-            set
-            {
-                if (value - bets[2] < rem_cash)
-                {
-                    bets[2] = value - value % 50000;
-                }
-                else
-                {
-                    bets[2] = bets[2] + rem_cash;
-                }
-                PropertyChanged(this, new PropertyChangedEventArgs("Rem_cash"));
-                PropertyChanged(this, new PropertyChangedEventArgs("Bet2"));
-            }
-        }
-        
-        public double Bet3
-        {
-            get
-            {
-                return bets[3];
-            }
-            set
-            {
-                if (value - bets[3] < rem_cash)
-                {
-                    bets[3] = value - value % 50000;
-                }
-                else
-                {
-                    bets[3] = bets[3] + rem_cash;
-                }
-                PropertyChanged(this, new PropertyChangedEventArgs("Rem_cash"));
-                PropertyChanged(this, new PropertyChangedEventArgs("Bet3"));
-            }
-        }
-        
-        public double Bet4
-        {
-            get
-            {
-                return bets[4];
-            }
-            set
-            {
-                if (value - bets[4] < rem_cash)
-                {
-                    bets[4] = value - value % 50000;
-                }
-                else
-                {
-                    bets[4] = bets[4] + rem_cash;
-                }
-                PropertyChanged(this, new PropertyChangedEventArgs("Rem_cash"));
-                PropertyChanged(this, new PropertyChangedEventArgs("Bet4"));
-            }
-        }*/
 
         public void incQnum()
         {
@@ -173,5 +82,148 @@ namespace Projekt
             setBets(3, bet3);
             setBets(4, bet4);
         }
+    }
+    //data base
+    [Table]
+    public class Storage : INotifyPropertyChanged, INotifyPropertyChanging
+    {
+        [Column(IsPrimaryKey = true, IsDbGenerated = true, AutoSync = AutoSync.OnInsert)]
+        public int ScoreID { get; set; }
+
+        private string nickValue;
+
+        [Column]
+        public string Nick
+        {
+            get
+            {
+                return nickValue;
+            }
+            set
+            {
+                NotifyPropertyChanging("Nick");
+                nickValue = value;
+                NotifyPropertyChanged("Nick");
+            }
+        }
+
+        private int scoreValue;
+
+        [Column]
+        public int Score
+        {
+            get
+            {
+                return scoreValue;
+            }
+            set
+            {
+                NotifyPropertyChanging("Score");
+                scoreValue = value;
+                NotifyPropertyChanged("Score");
+            }
+        }
+
+        private DateTime dateValue;
+
+        [Column]
+        public DateTime Date
+        {
+            get
+            {
+                return dateValue;
+            }
+            set
+            {
+                NotifyPropertyChanging("Date");
+                dateValue = value;
+                NotifyPropertyChanged("Date");
+            }
+        }
+
+        private void NotifyPropertyChanged(string propertyName)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this,
+                              new PropertyChangedEventArgs(propertyName));
+            }
+        }
+
+        private void NotifyPropertyChanging(string propertyName)
+        {
+            if (PropertyChanging != null)
+            {
+                PropertyChanging(this,
+                              new PropertyChangingEventArgs(propertyName));
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        public event PropertyChangingEventHandler PropertyChanging;
+    }
+
+    public class ScoreDB : DataContext
+    {
+        public string Name { get; set; }
+
+        public Table<Storage> ScoresTable;
+
+        public ScoreDB(string connection)
+            : base(connection)
+        {
+        }
+
+        public static void MakeDB()
+        {
+            using (ScoreDB newDB = new ScoreDB("Data Source=isostore:/Sample.sdf"))
+            {
+
+                if (!newDB.DatabaseExists())
+                {
+                    newDB.CreateDatabase();
+                }
+
+            }
+        }
+
+        public List<Storage> getScores()
+        {
+            using (ScoreDB newDB = new ScoreDB("Data Source=isostore:/Sample.sdf"))
+            {
+
+                var allScores = from Storage storage
+                                     in newDB.ScoresTable
+                                select storage;
+
+                List<Storage> scoresList = allScores.ToList<Storage>();
+                App thisApp = Application.Current as App;
+                scoresList.Sort(sortByScores);
+                return scoresList;
+
+            }
+        }
+
+        public void addScore(String nick, double score)
+        {
+            using (ScoreDB newDB = new ScoreDB("Data Source=isostore:/Sample.sdf"))
+            {
+                Storage newScore = new Storage();
+                newScore.Nick = nick;
+                newScore.Score = Convert.ToInt32(score);
+                newScore.Date = DateTime.Now;
+
+                newDB.ScoresTable.InsertOnSubmit(newScore);
+                newDB.SubmitChanges();
+            }
+        }
+
+        private static int sortByScores(Storage x, Storage y)
+        {
+            if (x.Score > y.Score) return -1;
+            else if (x.Score == y.Score) return 0;
+            else return 1;
+        }
+
     }
 }

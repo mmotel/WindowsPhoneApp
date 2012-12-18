@@ -58,7 +58,6 @@ namespace Projekt
         }
 
 
-
         // Raised every 1000 miliseconds while the DispatcherTimer is active.
         public void Each_Tick(object o, EventArgs sender)
         {
@@ -71,7 +70,7 @@ namespace Projekt
             else if(i > 0)
             {
                 i--;
-                passingTime.Width -= 200 / thisApp.setData.Level; 
+                passingTime.Width -= 230 / thisApp.setData.Level; 
                 txtblock.Text = "Time: " + i.ToString();
             }
         }

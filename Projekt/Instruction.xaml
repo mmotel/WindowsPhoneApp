@@ -22,23 +22,12 @@
         <controls:Panorama Title="Instruction">
             <!--Panorama item one-->
             <controls:PanoramaItem Header="Game's rules">
-                <Grid Background="#07719B">
+                <Grid Background="#FF07719B">
                     <StackPanel>
-                        <TextBlock TextWrapping="Wrap" FontSize="28" FontFamily="Calibri" Margin="5,5,5,5">
-                            To win a million you have to ansver eight questions by betting your mone on ansvers.
-                        </TextBlock>
-                        <TextBlock TextWrapping="Wrap" FontSize="28" FontFamily="Calibri" Margin="5,5,5,5">
-                            1. You should bet all your money. 
-                            If you don't bet all your money , remaining money will be lost.
-                        </TextBlock>
-                        <TextBlock TextWrapping="Wrap" FontSize="28" FontFamily="Calibri" Margin="5,5,5,5">
-                            2. One ansver's bet should be empty (zero). 
-                            If you bet on all ansvers, the lowest bet will be lost.
-                        </TextBlock>
-                        <TextBlock TextWrapping="Wrap" FontSize="28" FontFamily="Calibri" Margin="5,5,5,5">
-                            3. You have limited time to ansver the question. 
-                            If you don't bet all you money until the time ends, remaining money will be lost. 
-                        </TextBlock>
+                        <TextBlock TextWrapping="Wrap" FontSize="28" FontFamily="Calibri" Margin="5,5,5,5" FontStyle="Italic" FontWeight="Bold" Text="To win a million you have to answers eight questions by betting your money on answers."/>
+                        <TextBlock TextWrapping="Wrap" FontSize="28" FontFamily="Calibri" Margin="5,5,5,5"><Run FontWeight="Bold" FontStyle="Italic" Text="1. "/><Run Text="You should bet all your money. If you don't bet all your money , remaining money will be lost."/></TextBlock>
+                        <TextBlock TextWrapping="Wrap" FontSize="28" FontFamily="Calibri" Margin="5,5,5,5"><Run FontWeight="Bold" FontStyle="Italic" Text="2. "/><Run Text="One answer's bet should be empty (zero). If you bet on all answers, the lowest bet will be lost."/></TextBlock>
+                        <TextBlock TextWrapping="Wrap" FontSize="28" FontFamily="Calibri" Margin="5,5,5,5"><Run FontWeight="Bold" FontStyle="Italic" Text="3. "/><Run Text="You have limited time to answers the question. If you don't bet all you money until the time ends, remaining money will be lost."/></TextBlock>
                     </StackPanel>
                 </Grid>
             </controls:PanoramaItem>
@@ -47,7 +36,7 @@
             <controls:PanoramaItem Header="Tips">
                 <Grid Background="#07719B">
                     <StackPanel>
-                        <TextBlock TextWrapping="Wrap" FontSize="28" FontFamily="Calibri" FontWeight="Bold" Margin="5,5,5,5">
+                        <TextBlock TextWrapping="Wrap" FontSize="32" FontFamily="Calibri" FontWeight="Bold" Margin="5,5,5,5" FontStyle="Italic">
                             Settings
                         </TextBlock>
                         <TextBlock TextWrapping="Wrap" FontSize="28" FontFamily="Calibri" Margin="5,5,5,5">
@@ -55,7 +44,7 @@
                             choose level (time which you have to ansver a guestion) 
                             and two categories of questions you don't want to ansver.
                         </TextBlock>
-                        <TextBlock TextWrapping="Wrap" FontSize="28" FontFamily="Calibri" FontWeight="Bold" Margin="5,5,5,5">
+                        <TextBlock TextWrapping="Wrap" FontSize="32" FontFamily="Calibri" FontWeight="Bold" Margin="5,5,5,5" FontStyle="Italic">
                             Timer
                         </TextBlock>
                         <TextBlock TextWrapping="Wrap" FontSize="28" FontFamily="Calibri" Margin="5,5,5,5">

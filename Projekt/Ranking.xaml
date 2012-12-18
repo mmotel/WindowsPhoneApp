@@ -24,8 +24,9 @@
         </Grid.RowDefinitions>
 
         <!--TitlePanel contains the name of the application and page title-->
-        <Grid x:Name="TitlePanel"  Grid.Row="0">
-            <TextBlock x:Name="PageTitle" Text="RANKING" FontFamily="Calibri" FontStyle="Italic" FontSize="48" Margin="0,40,0,0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <Grid x:Name="TitlePanel"  Grid.Row="0" Margin="12,0">
+            <TextBlock x:Name="PageTitle" Text="RANKING" FontFamily="Calibri" FontStyle="Italic" FontSize="48" Margin="5,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+            <Path Data="M287,59.5" Fill="#FFF4F4F5" HorizontalAlignment="Right" Height="0" Margin="0,0,193,30.5" Stretch="Fill" Stroke="Black" UseLayoutRounding="False" VerticalAlignment="Bottom" Width="0"/>
         </Grid>
 
         <!--ContentPanel - place additional content here-->
@@ -37,80 +38,80 @@
                 <RowDefinition Height="100*"></RowDefinition>
                 <RowDefinition Height="100*"></RowDefinition>
             </Grid.RowDefinitions>
-            
-            
-            <Grid Grid.Row="0" Margin="0,5,0,5" Background="#07719B">
+
+
+            <Grid x:Name="no1" Grid.Row="0" Margin="0,5,0,5" Background="#07719B" Visibility="Collapsed">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="100*"></RowDefinition>
                     <RowDefinition Height="70*"></RowDefinition>
                     <RowDefinition Height="70*"></RowDefinition>
                 </Grid.RowDefinitions>
 
-                <TextBlock x:Name="one_nick" Text="1. " Grid.Row="0" Margin="5, 0, 0, 0" FontFamily="Calibri" FontStyle="Normal" FontSize="44" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                <TextBlock x:Name="one_nick" Text="" Grid.Row="0" Margin="5, 0, 0, 0" FontFamily="Calibri" FontStyle="Normal" FontSize="44" VerticalAlignment="Center" HorizontalAlignment="Left"/>
 
-                <TextBlock x:Name="one_score" Text="Result: " Grid.Row="1" Margin="5, 0, 0, 0" FontFamily="Calibri" FontStyle="Normal" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                <TextBlock x:Name="one_score" Text="" Grid.Row="1" Margin="5, 0, 0, 0" FontFamily="Calibri" FontStyle="Normal" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Left"/>
 
-                <TextBlock x:Name="one_date" Text="Date: " Grid.Row="2" Margin="5, 0, 0, 0" FontFamily="Calibri" FontStyle="Normal" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                <TextBlock x:Name="one_date" Text="" Grid.Row="2" Margin="5, 0, 0, 0" FontFamily="Calibri" FontStyle="Normal" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Left"/>
 
             </Grid>
 
-            <Grid Grid.Row="1" Margin="0,5,0,5" Background="#07719B">
+            <Grid x:Name="no2" Grid.Row="1" Margin="0,5,0,5" Background="#07719B" Visibility="Collapsed">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="100*"></RowDefinition>
                     <RowDefinition Height="70*"></RowDefinition>
                     <RowDefinition Height="70*"></RowDefinition>
                 </Grid.RowDefinitions>
 
-                <TextBlock x:Name="two_nick" Text="2. " Grid.Row="0" Margin="5, 0, 0, 0" FontFamily="Calibri" FontStyle="Normal" FontSize="44" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                <TextBlock x:Name="two_nick" Text="" Grid.Row="0" Margin="5, 0, 0, 0" FontFamily="Calibri" FontStyle="Normal" FontSize="44" VerticalAlignment="Center" HorizontalAlignment="Left"/>
 
-                <TextBlock x:Name="two_score" Text="Result: " Grid.Row="1" Margin="5, 0, 0, 0" FontFamily="Calibri" FontStyle="Normal" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                <TextBlock x:Name="two_score" Text="" Grid.Row="1" Margin="5, 0, 0, 0" FontFamily="Calibri" FontStyle="Normal" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Left"/>
 
-                <TextBlock x:Name="two_date" Text="Date: " Grid.Row="2" Margin="5, 0, 0, 0" FontFamily="Calibri" FontStyle="Normal" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                <TextBlock x:Name="two_date" Text="" Grid.Row="2" Margin="5, 0, 0, 0" FontFamily="Calibri" FontStyle="Normal" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Left"/>
 
             </Grid>
 
-            <Grid Grid.Row="2" Margin="0,5,0,5" Background="#07719B">
+            <Grid x:Name="no3" Grid.Row="2" Margin="0,5,0,5" Background="#07719B" Visibility="Collapsed">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="100*"></RowDefinition>
                     <RowDefinition Height="70*"></RowDefinition>
                     <RowDefinition Height="70*"></RowDefinition>
                 </Grid.RowDefinitions>
 
-                <TextBlock x:Name="three_nick" Text="3. " Grid.Row="0" Margin="5, 0, 0, 0" FontFamily="Calibri" FontStyle="Normal" FontSize="44" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                <TextBlock x:Name="three_nick" Text="" Grid.Row="0" Margin="5, 0, 0, 0" FontFamily="Calibri" FontStyle="Normal" FontSize="44" VerticalAlignment="Center" HorizontalAlignment="Left"/>
 
-                <TextBlock x:Name="three_score" Text="Result: " Grid.Row="1" Margin="5, 0, 0, 0" FontFamily="Calibri" FontStyle="Normal" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                <TextBlock x:Name="three_score" Text="" Grid.Row="1" Margin="5, 0, 0, 0" FontFamily="Calibri" FontStyle="Normal" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Left"/>
 
-                <TextBlock x:Name="three_date" Text="Date: " Grid.Row="2" Margin="5, 0, 0, 0" FontFamily="Calibri" FontStyle="Normal" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                <TextBlock x:Name="three_date" Text="" Grid.Row="2" Margin="5, 0, 0, 0" FontFamily="Calibri" FontStyle="Normal" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Left"/>
 
             </Grid>
 
-            <Grid Grid.Row="3" Margin="0,5,0,5" Background="#07719B">
+            <Grid x:Name="no4" Grid.Row="3" Margin="0,5,0,5" Background="#07719B" Visibility="Collapsed">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="100*"></RowDefinition>
                     <RowDefinition Height="70*"></RowDefinition>
                     <RowDefinition Height="70*"></RowDefinition>
                 </Grid.RowDefinitions>
 
-                <TextBlock x:Name="four_nick" Text="4. " Grid.Row="0" Margin="5, 0, 0, 0" FontFamily="Calibri" FontStyle="Normal" FontSize="44" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                <TextBlock x:Name="four_nick" Text="" Grid.Row="0" Margin="5, 0, 0, 0" FontFamily="Calibri" FontStyle="Normal" FontSize="44" VerticalAlignment="Center" HorizontalAlignment="Left"/>
 
-                <TextBlock x:Name="four_score" Text="Result: " Grid.Row="1" Margin="5, 0, 0, 0" FontFamily="Calibri" FontStyle="Normal" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                <TextBlock x:Name="four_score" Text="" Grid.Row="1" Margin="5, 0, 0, 0" FontFamily="Calibri" FontStyle="Normal" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Left"/>
 
-                <TextBlock x:Name="four_date" Text="Date: " Grid.Row="2" Margin="5, 0, 0, 0" FontFamily="Calibri" FontStyle="Normal" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                <TextBlock x:Name="four_date" Text="" Grid.Row="2" Margin="5, 0, 0, 0" FontFamily="Calibri" FontStyle="Normal" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Left"/>
 
             </Grid>
 
-            <Grid Grid.Row="4" Margin="0,5,0,5" Background="#07719B">
+            <Grid x:Name="no5" Grid.Row="4" Margin="0,5,0,5" Background="#07719B" Visibility="Collapsed">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="100*"></RowDefinition>
                     <RowDefinition Height="70*"></RowDefinition>
                     <RowDefinition Height="70*"></RowDefinition>
                 </Grid.RowDefinitions>
 
-                <TextBlock x:Name="five_nick" Text="5. " Grid.Row="0" Margin="5, 0, 0, 0" FontFamily="Calibri" FontStyle="Normal" FontSize="44" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                <TextBlock x:Name="five_nick" Text="" Grid.Row="0" Margin="5, 0, 0, 0" FontFamily="Calibri" FontStyle="Normal" FontSize="44" VerticalAlignment="Center" HorizontalAlignment="Left"/>
 
-                <TextBlock x:Name="five_score" Text="Result: " Grid.Row="1" Margin="5, 0, 0, 0" FontFamily="Calibri" FontStyle="Normal" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                <TextBlock x:Name="five_score" Text="" Grid.Row="1" Margin="5, 0, 0, 0" FontFamily="Calibri" FontStyle="Normal" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Left"/>
 
-                <TextBlock x:Name="five_date" Text="Date: " Grid.Row="2" Margin="5, 0, 0, 0" FontFamily="Calibri" FontStyle="Normal" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                <TextBlock x:Name="five_date" Text="" Grid.Row="2" Margin="5, 0, 0, 0" FontFamily="Calibri" FontStyle="Normal" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Left"/>
 
             </Grid>
 

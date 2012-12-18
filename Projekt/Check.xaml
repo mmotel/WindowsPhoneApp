@@ -27,28 +27,28 @@
 
         <!--TitlePanel contains the name of the application and page title-->
         <Grid x:Name="TitlePanel" Grid.Row="0"  Margin="10,15,10,0">
-            <TextBlock x:Name="q_number" Text="QUESTION 1" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontFamily="Calibri" FontSize="22"/>
+            <TextBlock x:Name="q_number" Text="QUESTION 1" TextWrapping="Wrap" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Calibri" FontSize="22" Margin="5,0,0,0"/>
         </Grid>
 
         <Grid Grid.Row="1">
-            <TextBlock x:Name="name" Text="CHECK ANSWER" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="15,5,0,0" Height="Auto" FontFamily="Calibri" FontStyle="Italic" FontSize="32"/>
+            <TextBlock x:Name="name" Text="CHECK ANSWER" TextWrapping="Wrap" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="15,5,0,0" Height="Auto" FontFamily="Calibri" FontStyle="Italic" FontSize="32"/>
         </Grid>
 
         <Grid Grid.Row="2"  Margin="12,5,12,5" Background="#07719B">
-            <TextBlock x:Name="info" Text="info " Margin="0,5,0,0" TextWrapping="Wrap" FontFamily="Calibri" FontStyle="Italic" FontSize="32" VerticalAlignment="Center" TextAlignment="Center" Height="auto"/>
+            <TextBlock x:Name="info" Text="info " Margin="5,5,0,0" TextWrapping="Wrap" FontFamily="Calibri" FontStyle="Italic" FontSize="32" TextAlignment="Left" Height="auto" HorizontalAlignment="Left" VerticalAlignment="Center"/>
             </Grid>
 
         <Grid Grid.Row="3" Margin="12,5,12,5" Background="#07719B">
-            <TextBlock x:Name="q_content" Text="Question Content" Margin="15,5,0,0" TextWrapping="Wrap" FontFamily="Calibri" FontStyle="Italic" FontSize="36" VerticalAlignment="Center" Height="auto"/>
+            <TextBlock x:Name="q_content" Text="Question Content" Margin="5,5,0,0" TextWrapping="Wrap" FontFamily="Calibri" FontStyle="Italic" FontSize="36" Height="auto" HorizontalAlignment="Left" VerticalAlignment="Center"/>
             </Grid>
 
         <Grid Grid.Row="4" Margin="12,5,12,5" Background="#07719B">
             <TextBlock Text="Correct Answer: " Margin="5,5,0,0" FontFamily="Calibri" FontSize="30" VerticalAlignment="top" Height="50"/>
-            <TextBlock x:Name="correct_answer" TextWrapping="Wrap" Margin="15,5,0,0" Text="Correct Answer" FontFamily="Calibri" FontStyle="Italic" FontSize="36" VerticalAlignment="Center" Height="auto"/>
+            <TextBlock x:Name="correct_answer" TextWrapping="Wrap" Margin="5,5,0,0" Text="Correct Answer" FontFamily="Calibri" FontStyle="Italic" FontSize="36" Height="auto" VerticalAlignment="Center"/>
             </Grid>
 
         <Grid Grid.Row="5" Margin="12,5,12,5">
-            <TextBlock x:Name="remaining_cash" Text="Your cash: "  Margin="0,5,0,0" TextAlignment="Center" FontFamily="Verdana" FontSize="28" Height="50"/>
+            <TextBlock x:Name="remaining_cash" Text="Your cash: "  Margin="5,0,0,0" TextAlignment="Center" FontFamily="Verdana" FontSize="28" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
             </Grid>
 
 
@@ -56,7 +56,7 @@
             <Button x:Name="Next_Q" Content="Next question" Click="Next_Q_Click" Background="#2495bf" Width="480" Height="80" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Top" BorderThickness="0">
 
             </Button>
-            <Button x:Name="GoToMenu" Content="Go back to  main menu" Click="GoToMenu_Click" Background="#2495bf" Width="480" Height="80" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Top" BorderThickness="0">
+            <Button x:Name="GoToMenu" Content="Go back to  main menu" Click="GoToMenu_Click" Background="#2495bf" Width="480" Height="80" Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Top" BorderThickness="0">
 
             </Button>
         </Grid>

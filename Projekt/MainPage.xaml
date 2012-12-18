@@ -22,13 +22,13 @@
         </Grid.RowDefinitions>
 
         <!--TitlePanel contains the name of the application and page title-->
-        <Grid x:Name="TitlePanel"  Grid.Row="0">
-            <TextBlock x:Name="ApplicationTitle" Text="WIN A MILLION!" Foreground="Black" FontWeight="Bold" FontFamily="Calibri" FontStyle="Italic" FontSize="71"  Margin="0,-15,0,0" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-            <TextBlock x:Name="PageTitle" Text="MAIN MENU" FontFamily="Calibri" FontStyle="Italic" FontSize="48" Margin="0,40,0,0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <Grid x:Name="TitlePanel"  Grid.Row="0" Margin="12,0">
+            <TextBlock x:Name="ApplicationTitle" Text="WIN A MILLION!" Foreground="Black" FontWeight="Bold" FontFamily="Calibri" FontStyle="Italic" FontSize="67"  Margin="0,-15,0,0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+            <TextBlock x:Name="PageTitle" Text="MAIN MENU" FontFamily="Calibri" FontStyle="Italic" FontSize="48" Margin="5,0,0,0" VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
         </Grid>
 
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0" Grid.ColumnSpan="2">
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0" Grid.ColumnSpan="2">
             <StackPanel>
                 <Button x:Name="Stage1" Background="#07719B" BorderThickness="0" Content="START GAME" Click="Stage1_Click"  Height="120"/>
 
@@ -38,18 +38,6 @@
 
                 <Button x:Name="Ranking" Background="#07719B" BorderThickness="0" Content="RANKING" Click="Ranking_Click" Height="120"/>
 
-                <!--
-                <Button Name="Stage2" Background="#07719B" BorderThickness="0" Content="STAGE TWO" Click="Stage2_Click" Width="370" Height="120"/>
-
-                <Button Name="FinalStage" Background="#07719B" BorderThickness="0" Content="FINAL STAGE" Click="Stage3_Click" Width="370" Height="120"/>
-
-                <Button Name="Check" Background="#07719B" BorderThickness="0" Content="CHECK ANSWER" Click="Check_Click" Width="370" Height="120"/>
-                -->
-                
-                
-                <Button x:Name="testuj" BorderThickness="1" Content="test" Click="testuj_Click"></Button>
-                
-                <TextBlock x:Name="test" Height="auto" TextWrapping="Wrap"></TextBlock>
 
             </StackPanel>
         </Grid>
