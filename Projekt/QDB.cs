@@ -87,7 +87,7 @@ namespace Projekt
             s1.Add(new Question(3, "Freddie Mercury was a lider of...", "Rolling Stones", "Pink Floyd", "Led Zeppelin", "Queen", 4));
             s1.Add(new Question(3, "Finish band's name: Jackson ...", "Four", "Five", "Six", "Seven", 2));
             s1.Add(new Question(3, "Who has painted the Mona Lisa?", "Claude Monet", "Vinente Van Ghog", "Leonardo Da Vinci", "Rembrandt van Rijn", 3));
-            s2.Add(new Question(3, "David was sculped by...", "Michelangelo", "Leonardo Da Vinci", "", "", 1));
+            s2.Add(new Question(3, "David was sculped by...", "Michelangelo", "Leonardo Da Vinci", "Auguste Rodin", "", 1));
             s2.Add(new Question(3, "Who is a lider of Mettalica?", "Kirk Hammett", "James Hetfield", "Lars Ulrich", "", 2));
             s3.Add(new Question(3, "Who has designed the Sydney Opera House building?", "Donald Crone", "Jorn Utzon", "", "", 2));
 
@@ -96,15 +96,15 @@ namespace Projekt
             s1.Add(new Question(4, "What is the distance of marathon?", "42,095 km", "42,155 km", "42,195 km", "42,225 km", 3));
             s1.Add(new Question(4, "First Summer Olympic Games held in...", "1896", "1900", "1904", "1908", 1));
             s2.Add(new Question(4, "How many times Nicki Pedersen was Speedway Grand Prix Champion?", "Two", "Three", "Four", "", 2));
-            s2.Add(new Question(4, "How many times did Sergey Bubka break a world record in pole vaulting (indoor and outdoor)?", "25", "35", "", "", 2));
+            s2.Add(new Question(4, "How many times did Sergey Bubka break a world record in pole vaulting (indoor and outdoor)?", "25", "35", "45", "", 2));
             s3.Add(new Question(4, "How many goals did Andriy Schevchenko scores for AC Milan?", "175", "183", "", "", 1));
             
             // Category 5 - History
             s1.Add(new Question(5, "In which year did World War I end?", "1914", "1915", "1918", "1919", 3));
-            s1.Add(new Question(5, "Wend did World War II end?", "October 1st, 1945", "October 2nd, 1945", "September 1st, 1945", "September 2nd, 1945", 4));
+            s1.Add(new Question(5, "When did World War II end?", "October 1st, 1945", "October 2nd, 1945", "September 1st, 1945", "September 2nd, 1945", 4));
             s1.Add(new Question(5, "How many years did Hundred Years' War last?", "100", "107", "113", "115", 3));
             s2.Add(new Question(5, "In which century did The Battle of Vienna take place?", "17th", "18th", "16th", "", 1));
-            s2.Add(new Question(5, "In which battle did Erwin Rommel fight agains Bernard L. Montgomery in 1942?", "First Battle of El Alamein", "Second Battle of El Alamein", "", "", 2));
+            s2.Add(new Question(5, "In which battle did Erwin Rommel fight agains Bernard L. Montgomery in 1942?", "First Battle of El Alamein", "Second Battle of El Alamein", "Third Battle of El Alamein", "", 2));
             s3.Add(new Question(5, "Prohibition was instituted with ratification of the Eighteenth Amendment to the United States Constitution in...", "1919", "1929", "", "", 1));
             
             // Category 6 - Biology 

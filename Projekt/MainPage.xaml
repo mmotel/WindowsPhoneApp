@@ -24,19 +24,19 @@
         <!--TitlePanel contains the name of the application and page title-->
         <Grid x:Name="TitlePanel"  Grid.Row="0" Margin="12,0">
             <TextBlock x:Name="ApplicationTitle" Text="WIN A MILLION!" Foreground="Black" FontWeight="Bold" FontFamily="Calibri" FontStyle="Italic" FontSize="67"  Margin="0,-15,0,0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
-            <TextBlock x:Name="PageTitle" Text="MAIN MENU" FontFamily="Calibri" FontStyle="Italic" FontSize="48" Margin="5,0,0,0" VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
+            <TextBlock x:Name="PageTitle" Text="MAIN MENU" Foreground="White" FontFamily="Calibri" FontStyle="Italic" FontSize="48" Margin="5,0,0,0" VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
         </Grid>
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0" Grid.ColumnSpan="2">
             <StackPanel>
-                <Button x:Name="Stage1" Background="#07719B" BorderThickness="0" Content="START GAME" Click="Stage1_Click"  Height="120"/>
+                <Button x:Name="Stage1" Foreground="White" Background="#07719B" BorderThickness="0" Content="START GAME" Click="Stage1_Click"  Height="120"/>
 
-                <Button x:Name="Settings" Background="#07719B" BorderThickness="0" Content="SETTINGS" Click="Settings_Click" Height="120"/>
+                <Button x:Name="Settings" Foreground="White" Background="#07719B" BorderThickness="0" Content="SETTINGS" Click="Settings_Click" Height="120"/>
 
-                <Button x:Name="Instruction" Background="#07719B" BorderThickness="0" Content="INSTRUCTION" Click="Instruction_Click" Height="120"/>
+                <Button x:Name="Instruction" Foreground="White" Background="#07719B" BorderThickness="0" Content="INSTRUCTION" Click="Instruction_Click" Height="120"/>
 
-                <Button x:Name="Ranking" Background="#07719B" BorderThickness="0" Content="RANKING" Click="Ranking_Click" Height="120"/>
+                <Button x:Name="Ranking" Foreground="White" Background="#07719B" BorderThickness="0" Content="RANKING" Click="Ranking_Click" Height="120"/>
 
 
             </StackPanel>
